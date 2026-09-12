@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#193b64" />
+    <meta
+      name="description"
+      content="SkyCast is a responsive weather dashboard built with HTML, CSS and Vanilla JavaScript."
+    />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" href="icon.png" type="image/png" />
+  </head>
+
+  <body class="weather-clear app-starting">
+    <div class="app-loader" id="app-loader" role="status" aria-live="polite">
+      <div class="app-loader-content">
+        <img
+          class="app-loader-logo"
+          src="assets/skycast-logo.png"
+          alt="SkyCast"
+        />
+      </div>
+    </div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-actions">
+          <div class="brand" aria-hidden="true">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span>Weather</span>
+          </div>
+          <button
+            class="control-button unit-toggle"
+            id="unit-toggle"
+            type="button"
+            aria-label="Switch temperature unit"
+          >
+            °C
+          </button>
+          <button
+            class="control-button location-button"
+            id="location-button"
+            type="button"
+            aria-label="Use my current location"
+            title="Use my current location"
+          >
+            <svg
+              class="location-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M12 21s7-4.35 7-10a7 7 0 1 0-14 0c0 5.65 7 10 7 10Z"
+              ></path>
+              <circle cx="12" cy="11" r="2.35"></circle>
+            </svg>
+          </button>
+        </div>
+
+        <form class="search-form topbar-search" id="search-form" role="search">
+          <label class="sr-only" for="search-input">Search for a city</label>
+          <input
+            id="search-input"
+            name="city"
+            type="search"
+            placeholder="Search city"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button type="submit">Search</button>
+          <div
+            class="search-suggestions"
+            id="search-suggestions"
+            role="listbox"
+            aria-label="City suggestions"
+            hidden
+          ></div>
+        </form>
+      </header>
+
+      <main>
+        <section class="hero-card" aria-labelledby="location-name">
+          <div class="weather-summary-card">
+            <div class="hero-topline">
+              <div>
+                <p class="eyebrow">Current weather</p>
+                <div class="location-heading">
+                  <h1 id="location-name">Detecting location…</h1>
+                  <button
+                    class="favorite-button"
+                    id="favorite-button"
+                    type="button"
+                    aria-label="Add current city to favorites"
+                    title="Add to favorites"
+                  >
+                    ☆
+                  </button>
+                </div>
+                <p class="muted" id="current-date">Loading local time…</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="current-weather">
+            <div class="weather-visual" aria-hidden="true">
+              <span class="weather-icon" id="current-icon">
+                <img src="weather-icons/clear-day.svg" alt="Clear sky" />
+              </span>
+              <span class="weather-orbit"></span>
+            </div>
+
+            <div class="temperature-block">
+              <div class="temperature" aria-label="Current temperature">
+                <span id="current-temperature">--</span><sup>°</sup>
+              </div>
+              <p class="condition" id="current-condition">
+                Waiting for weather data
+              </p>
+              <p class="high-low" id="high-low">H --° &nbsp; L --°</p>
+            </div>
+          </div>
+          <div class="metrics-panel">
+            <div class="metrics-grid" aria-label="Current weather details">
+              <article class="metric-card">
+                <span class="metric-icon" aria-hidden="true">💧</span>
+                <div>
+                  <p class="metric-label">Humidity</p>
+                  <p class="metric-value" id="humidity">--%</p>
+                </div>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon" aria-hidden="true">🍃</span>
+                <div>
+                  <p class="metric-label">Wind</p>
+                  <p class="metric-value" id="wind-speed">-- km/h</p>
+                </div>
+              </article>
+              <article class="metric-card">
+                <span
+                  class="metric-icon"
+                  id="feels-like-icon"
+                  aria-hidden="true"
+                  >☺️</span
+                >
+                <div>
+                  <p class="metric-label">Feels like</p>
+                  <p class="metric-value" id="feels-like">--°</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="hourly-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Next 24 hours</p>
+              <h2 id="hourly-title">Hourly temperature</h2>
+            </div>
+            <span class="section-hint">Local time</span>
+          </div>
+
+          <div class="chart-card">
+            <svg
+              id="hourly-chart"
+              class="hourly-chart"
+              viewBox="0 0 720 250"
+              role="img"
+              aria-label="Hourly temperature chart"
+            ></svg>
+          </div>
+          <div
+            class="hourly-list"
+            id="hourly-list"
+            aria-label="Hourly forecast"
+          ></div>
+        </section>
+
+        <section class="content-section" aria-labelledby="forecast-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Plan ahead</p>
+              <h2 id="forecast-title">7-day forecast</h2>
+            </div>
+          </div>
+          <div class="forecast-grid" id="forecast-grid"></div>
+        </section>
+
+        <section
+          class="content-section favorites-section"
+          aria-labelledby="favorites-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Quick access</p>
+              <h2 id="favorites-title">Favorite cities</h2>
+            </div>
+          </div>
+          <div class="favorites-list" id="favorites-list">
+            <p class="empty-state">Your favorite cities will appear here.</p>
+          </div>
+        </section>
+
+        <p
+          class="status-message"
+          id="status-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </main>
+
+      <footer class="footer">
+        <span>Built with HTML, CSS &amp; Vanilla JavaScript</span>
+        <span
+          >Weather data by
+          <a href="https://open-meteo.com/" target="_blank" rel="noreferrer"
+            >Open-Meteo</a
+          ></span
+        >
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

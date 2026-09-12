@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="fog-cloud" x1="30" y1="43" x2="128" y2="111" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FCFF"/>
+      <stop offset="1" stop-color="#A2B8D5"/>
+    </linearGradient>
+  </defs>
+  <path d="M35 105h82c15 0 27-11 27-25 0-13-11-24-26-25-5-18-21-31-40-31-21 0-38 15-42 36-14 2-24 12-24 25 0 12 10 20 23 20Z" fill="url(#fog-cloud)"/>
+  <g stroke="#D7E6F8" stroke-width="7" stroke-linecap="round">
+    <path d="M24 124h112"/>
+    <path d="M41 143h78"/>
+  </g>
+</svg>

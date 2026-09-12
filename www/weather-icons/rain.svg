@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="rain-cloud" x1="29" y1="35" x2="132" y2="113" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF4FF"/>
+      <stop offset="1" stop-color="#7F9CC8"/>
+    </linearGradient>
+    <linearGradient id="rain-drop" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#B4EDFF"/>
+      <stop offset="1" stop-color="#4D9EEB"/>
+    </linearGradient>
+  </defs>
+  <path d="M35 104h82c15 0 27-11 27-25 0-13-11-24-26-25-5-18-21-31-40-31-21 0-38 15-42 36-14 2-24 12-24 25 0 12 10 20 23 20Z" fill="url(#rain-cloud)"/>
+  <g stroke="url(#rain-drop)" stroke-width="8" stroke-linecap="round">
+    <path d="m45 121-8 18"/>
+    <path d="m80 121-8 18"/>
+    <path d="m115 121-8 18"/>
+  </g>
+</svg>

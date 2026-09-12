@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <radialGradient id="sun-fill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(67 60) rotate(54) scale(62)">
+      <stop stop-color="#FFF9D0"/>
+      <stop offset="0.58" stop-color="#FFD66B"/>
+      <stop offset="1" stop-color="#F29A49"/>
+    </radialGradient>
+  </defs>
+  <g stroke="#FFC85F" stroke-width="7" stroke-linecap="round">
+    <path d="M80 12v19"/><path d="M80 129v19"/>
+    <path d="M12 80h19"/><path d="M129 80h19"/>
+    <path d="m32 32 14 14"/><path d="m114 114 14 14"/>
+    <path d="m128 32-14 14"/><path d="m46 114-14 14"/>
+  </g>
+  <circle cx="80" cy="80" r="39" fill="url(#sun-fill)"/>
+</svg>

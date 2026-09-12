@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <radialGradient id="partly-sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63 51) rotate(54) scale(49)">
+      <stop stop-color="#FFF9D0"/>
+      <stop offset="0.58" stop-color="#FFD66B"/>
+      <stop offset="1" stop-color="#F29A49"/>
+    </radialGradient>
+    <linearGradient id="partly-cloud" x1="25" y1="80" x2="135" y2="141" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#A8BDE0"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#FFC85F" stroke-width="6" stroke-linecap="round">
+    <path d="M63 12v15"/><path d="M20 51h15"/>
+    <path d="m32 23 11 11"/><path d="m94 23-11 11"/>
+  </g>
+  <circle cx="63" cy="51" r="30" fill="url(#partly-sun)"/>
+  <path d="M38 139h80c16 0 29-12 29-27 0-14-11-25-27-27-5-20-22-33-42-33-22 0-40 16-44 37-15 2-26 13-26 26 0 15 12 24 30 24Z" fill="url(#partly-cloud)"/>
+</svg>

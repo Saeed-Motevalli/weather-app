@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" overflow="visible">
+  <defs>
+    <linearGradient id="partly-moon" x1="30" y1="23" x2="95" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1F7FF"/>
+      <stop offset="1" stop-color="#8CAAF2"/>
+    </linearGradient>
+    <linearGradient id="partly-night-cloud" x1="25" y1="80" x2="135" y2="141" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF5FF"/>
+      <stop offset="1" stop-color="#93A9D0"/>
+    </linearGradient>
+    <mask id="partly-crescent" maskUnits="userSpaceOnUse" mask-type="luminance">
+      <rect width="160" height="160" fill="white"/>
+      <circle cx="91" cy="43" r="34" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="61" cy="57" r="37" fill="url(#partly-moon)" mask="url(#partly-crescent)"/>
+  <circle cx="112" cy="28" r="4" fill="#FFE8A4"/>
+  <circle cx="35" cy="34" r="3" fill="#DDEAFF"/>
+  <path d="M38 139h80c16 0 29-12 29-27 0-14-11-25-27-27-5-20-22-33-42-33-22 0-40 16-44 37-15 2-26 13-26 26 0 15 12 24 30 24Z" fill="url(#partly-night-cloud)"/>
+</svg>
