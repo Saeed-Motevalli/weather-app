@@ -4,9 +4,31 @@ A modern and responsive weather dashboard built with **HTML, CSS, and Vanilla Ja
 
 This project provides real-time weather information with a clean user interface, dynamic weather-based themes, city search, location support, hourly temperature charts, and a 7-day forecast.
 
-The application is available as a responsive web application and an Android application built with **Capacitor**.
+The application is available as both a responsive web application and a native Android application built with **Capacitor**.
 
 The goal of this project was to practice modern frontend development concepts including API integration, asynchronous JavaScript, responsive design, mobile app packaging, and dynamic UI development.
+
+---
+
+# 🚀 Live Demo
+
+Try the web application online:
+
+https://saeed-motevalli.github.io/weather-app/
+
+
+# 📦 Repository
+
+View the source code:
+
+https://github.com/Saeed-Motevalli/weather-app
+
+
+# 📱 Android APK
+
+Download the Android application:
+
+[Download Android APK](https://github.com/Saeed-Motevalli/weather-app/releases/tag/v1.0.0)
 
 ---
 
@@ -23,11 +45,13 @@ The goal of this project was to practice modern frontend development concepts in
   <img src="screenshots/home-sunny.png" width="700">
 </p>
 
+
 ### Rainy Weather
 
 <p align="center">
   <img src="screenshots/home-rainy.png" width="700">
 </p>
+
 
 ### Cloudy Night Weather
 
@@ -35,17 +59,20 @@ The goal of this project was to practice modern frontend development concepts in
   <img src="screenshots/home-cloudy-night.png" width="700">
 </p>
 
+
 ### City Search
 
 <p align="center">
   <img src="screenshots/search.png" width="700">
 </p>
 
+
 ### Favorite Cities
 
 <p align="center">
   <img src="screenshots/favorite.png" width="700">
 </p>
+
 
 ---
 
@@ -59,6 +86,7 @@ The goal of this project was to practice modern frontend development concepts in
   <img src="screenshots/home-rainy-mobile-view.jpg" width="220">
 </p>
 
+
 ## Hourly Temperature
 
 <p align="center">
@@ -67,17 +95,20 @@ The goal of this project was to practice modern frontend development concepts in
   <img src="screenshots/rainy-hourly-temperature-mobile-view.jpg" width="220">
 </p>
 
+
 ## Search Mobile
 
 <p align="center">
   <img src="screenshots/search-mobile-view.jpg" width="260">
 </p>
 
+
 ## Favorite Cities Mobile
 
 <p align="center">
   <img src="screenshots/favorite-mobile-view.jpg" width="260">
 </p>
+
 
 ---
 
@@ -94,6 +125,7 @@ The goal of this project was to practice modern frontend development concepts in
 - Hourly temperature forecast
 - 7-day weather forecast
 
+
 ## 🔎 Search & Location
 
 - Search cities worldwide
@@ -102,12 +134,10 @@ The goal of this project was to practice modern frontend development concepts in
 - Automatic weather detection
 - Reverse geocoding support
 
-## 🎨 User Experience
 
-- Modern and clean interface
-- Fully responsive design
-- Desktop and mobile support
-- Dynamic weather-based themes
+## 🎨 Dynamic Weather Experience
+
+The interface automatically changes based on weather conditions.
 
 Supported weather themes:
 
@@ -120,11 +150,14 @@ Supported weather themes:
 - Thunderstorm
 - Fog / Mist
 
-Additional features:
+
+Additional user experience features:
 
 - Loading screen
 - Toast notifications
 - Smooth animations and transitions
+- Responsive layouts
+
 
 ## ⭐ Personalization
 
@@ -132,23 +165,22 @@ Additional features:
 - Favorite cities
 - Persistent user settings using LocalStorage
 
+
 ---
 
 # 📱 Android Application
 
 The Android version of this project is built using **Capacitor**.
 
-The application can run as a native Android application while sharing the same frontend codebase.
+The application runs as a native Android app while sharing the same frontend codebase.
 
 Features include:
 
 - Native Android packaging
 - Mobile optimized interface
 - Same weather experience as the web version
+- APK release distribution through GitHub Releases
 
-Download APK:
-
-YOUR_APK_LINK
 
 ---
 
@@ -164,7 +196,9 @@ YOUR_APK_LINK
 - LocalStorage
 - SVG
 - Responsive Web Design
-- Capacitor (Android App Packaging)
+- Capacitor
+- Android Studio
+
 
 ---
 
@@ -176,10 +210,12 @@ YOUR_APK_LINK
 - Weather data processing
 - SVG-based temperature chart generation
 - Geolocation integration
+- Reverse geocoding implementation
 - LocalStorage data persistence
 - Dynamic UI updates based on weather conditions
 - Responsive CSS architecture
 - Web application converted into Android application using Capacitor
+
 
 ---
 
@@ -196,7 +232,7 @@ Weather-App/
 │   ├── script.js
 │   │
 │   ├── assets/
-│   │   └── logo.png
+│   │   └── skycast-logo.png
 │   │
 │   └── weather-icons/
 │
@@ -209,37 +245,8 @@ Weather-App/
 ├── package.json
 │
 └── package-lock.json
+
 ```
-
----
-
-# 🚀 Getting Started
-
-## Clone the repository
-
-```bash
-git clone YOUR_REPOSITORY_URL
-```
-
-## Run Web Version
-
-Open:
-
-```text
-www/index.html
-```
-
-in your browser.
-
-No backend or installation is required.
-
----
-
-# 🌐 Live Demo
-
-Try the web application online:
-
-YOUR_LIVE_DEMO_LINK
 
 ---
 
@@ -262,6 +269,4 @@ Possible improvements:
 
 Frontend Developer
 
-GitHub:
-
-YOUR_GITHUB_LINK
+GitHub: [Saeed-Motevalli](https://github.com/Saeed-Motevalli)
