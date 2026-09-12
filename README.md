@@ -39,12 +39,6 @@ Download the Android application:
 
 ## Desktop View
 
-### Sunny Weather
-
-<p align="center">
-  <img src="screenshots/home-sunny.png" width="700">
-</p>
-
 
 ### Rainy Weather
 
@@ -59,6 +53,11 @@ Download the Android application:
   <img src="screenshots/home-cloudy-night.png" width="700">
 </p>
 
+### Sunny Weather
+
+<p align="center">
+  <img src="screenshots/home-sunny.png" width="700">
+</p>
 
 ### City Search
 
